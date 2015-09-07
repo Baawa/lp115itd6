@@ -4,6 +4,7 @@ public class Rse{
 	}
 	
 	public static boolean allRowSumsEqual(int[][] m){
+		if (m == null) return true;
 		
 		int result = 0;
 		for (int i = 0; i < m.length; i++){
@@ -16,14 +17,15 @@ public class Rse{
 		return true;
 	}
 	public static int rowSum(int[] v){
+		if (v == null) return 0;
 		
 		int l = v.length;
 		int result = 0;
 		
-		if (v == null) return 0;
-		
 		for (int i = 0; i < l; i++){
+			if ((int)(v[i]) != 0){
 			result = result + (int)(v[i]);
+			}
 		}
 		
 		return result;
