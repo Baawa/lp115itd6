@@ -10,13 +10,7 @@ public class TestRse {
 	 		{1, 1, 1, 1} };
 	
 	public static void main(String[] args) {
-		
-		Rse.print(a);
-		System.out.println();
 		System.out.print(Rse.allRowSumsEqual(a));
-		
-		System.out.println();
-		Rse.print(b);
 		System.out.println();
 		System.out.print(Rse.allRowSumsEqual(b));
 
