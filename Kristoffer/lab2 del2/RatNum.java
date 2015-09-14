@@ -6,7 +6,7 @@ public class RatNum {
 	int tx=0;
 	int nx=0;
 	
-	public static int gcd(int t, int n){
+	public int gcd(int t, int n){
 		if(t==0 && n==0) throw new IllegalArgumentException();
 		
 		if(t<0) t=t/((-1)); // om t är negativ, gör positiv
@@ -66,10 +66,10 @@ public class RatNum {
 	public static RatNum parse(String s){
 		int t,n;
 		boolean isRat = false;
-	
 		if(s.contains("/")){
 			String arr[] = s.split("/");
-			if(arr.length<2){ throw new NumberFormatException("incorrect input");}
+			if(arr.length<2) throw new NumberFormatException("For input string: \"\"");
+			if(arr.length == 3)throw new NumberFormatException("For input string: \"/"+arr[2]+"\"");
 			t = Integer.parseInt(arr[0]);
 			n = Integer.parseInt(arr[1]);
 			isRat = true;
@@ -112,9 +112,7 @@ public class RatNum {
 		}else return false;
 	}
 	public RatNum add(RatNum r){
-		int newtx=this.tx*r.nx;
-		int newtx2=r.tx*this.nx;
-		int sumtx= newtx+newtx2;
+		int sumtx= (this.tx*r.nx)+(r.tx*this.nx);
 		RatNum sumr = new RatNum(sumtx, (this.nx*r.nx));
 		return sumr;
 	}
