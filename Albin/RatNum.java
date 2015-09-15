@@ -44,7 +44,7 @@ public class RatNum {
 	}
 	
 	public double toDouble(){
-		return (double)(this.getNumerator() / this.getDenominator());
+		return (double)this.getNumerator() / this.getDenominator();
 	}
 	
 	public static RatNum parse(String str){
