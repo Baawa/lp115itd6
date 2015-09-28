@@ -88,6 +88,16 @@ public class TestCounter {
 		
 		delg(new CounterModel(100));
 		
+		/*
+		ChainedCounterModel hm = new ChainedCounterModel(0,100,null);
+		ChainedCounterModel mm = new ChainedCounterModel(0,60,hm);
+		ChainedCounterModel sm = new ChainedCounterModel(0,60,mm);
+		for (int i = 0; i < 3600; i++){
+			System.out.println(hm.getValue() + ":" + mm.getValue() + ":" + sm.getValue());
+			sm.increment();
+		}
+		System.out.println(hm.getValue() + ":" + mm.getValue() + ":" + sm.getValue());
+		*/
 	}
 	
 }

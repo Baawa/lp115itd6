@@ -1,6 +1,6 @@
 package lab3del1;
 
-public class CounterModel {
+public class CounterModel implements CounterInterface{
 	private int maxVal = 99;
 	private int num = 0;
 	private static int nbrofc = 0;
